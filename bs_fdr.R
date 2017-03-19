@@ -1,4 +1,4 @@
-bs_fdr<-function(community.matrix,multiple.adjust=c('BY','BSFD'),output.filename='edge_data',
+bs_fdr<-function(community.matrix,multiple.adjust=c('BY','BSFD'),output.filename='edge_data.csv',
   init.threshold=0.5,iters=1000,fdr=1,risk=0.05,cor.method=c('spearman','pearson','kendall','manhattan','euclidean',
   'canberra','bray','kulczynski','jaccard','gower','altGower','morisita','horn','mountford','raup','binomial','chao',
   'cao','mahalanobis')) 
@@ -20,9 +20,8 @@ bs_fdr<-function(community.matrix,multiple.adjust=c('BY','BSFD'),output.filename
   temp<-t(combn(colnames(y),2))
   #
   #run code in 10,000-row blocks
-  block<-floor(length(x)/10000)
-  edge_data<-data.frame('to'=character(),'from'=character(),'cor'=double(),stringsAsFactors=FALSE)
-   write.table(edge_data,output.filename,sep='\t',row.names=FALSE,quote=FALSE)
+  block<-floor(length(x)/10000)  edge_data<-data.frame('to'=character(),'from'=character(),'cor'=double(),stringsAsFactors=FALSE)
+   write.csv(edge_data,output.filename,row.names=FALSE,quote=FALSE)
   all_p_values<-double()
   start<-0
   #
@@ -46,7 +45,7 @@ bs_fdr<-function(community.matrix,multiple.adjust=c('BY','BSFD'),output.filename
       keep<-which(abs(cor)>init.threshold & is.na(cor)==FALSE)
     }
     edge_data<-data.frame('to'=otu_names[keep,1],'from'=otu_names[keep,2],'cor'=cor[keep],stringsAsFactors=FALSE)
-    write.table(edge_data,output.filename,append=TRUE,sep='\t',col.names=FALSE,row.names=FALSE,quote=FALSE)
+    write.csv(edge_data,output.filename,append=TRUE,col.names=FALSE,row.names=FALSE,quote=FALSE)
     start<-start+10000
   }
   #
@@ -70,12 +69,12 @@ bs_fdr<-function(community.matrix,multiple.adjust=c('BY','BSFD'),output.filename
     keep<-which(abs(cor)>init.threshold & is.na(cor)==FALSE)
   }
   edge_data<-data.frame('to'=otu_names[keep,1],'from'=otu_names[keep,2],'cor'=cor[keep],stringsAsFactors=FALSE)
-  write.table(edge_data,output.filename,append=TRUE,sep='\t',col.names=FALSE,row.names=FALSE,quote=FALSE)
+  write.csv(edge_data,output.filename,append=TRUE,col.names=FALSE,row.names=FALSE,quote=FALSE)
   #
   #If using BY method, adjust significance of p-values based on all rows from the first selection
   #This will vastly cut down on the network size
   #
-  edge_data<-read.delim(output.filename,header=TRUE)
+  edge_data<-read.csv(output.filename,header=TRUE)
   #
   #Benjamini-Yekutieli method
   if(multiple.adjust=='BY') {
@@ -131,5 +130,5 @@ bs_fdr<-function(community.matrix,multiple.adjust=c('BY','BSFD'),output.filename
     cat(paste0('\r'))
     flush.console()
   }
-  write.table(edge_data,output.filename,sep='\t',row.names=FALSE,quote=FALSE)
+  write.csv(edge_data,output.filename,row.names=FALSE,quote=FALSE)
 }
