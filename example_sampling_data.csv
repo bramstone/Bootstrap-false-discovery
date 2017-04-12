@@ -1,0 +1,49 @@
+names,site,species,occurrence
+DL1S,Dot Farm Marsh,Lythrum salicaria,Separate
+DL1C,Dot Farm Marsh,Lythrum salicaria,Co-occurring
+DL2S,Dot Farm Marsh,Lythrum salicaria,Separate
+DL2C,Dot Farm Marsh,Lythrum salicaria,Co-occurring
+DL3S,Dot Farm Marsh,Lythrum salicaria,Separate
+DL3C,Dot Farm Marsh,Lythrum salicaria,Co-occurring
+DL4S,Dot Farm Marsh,Lythrum salicaria,Separate
+DL4C,Dot Farm Marsh,Lythrum salicaria,Co-occurring
+DT1S,Dot Farm Marsh,Typha latifolia,Separate
+DT1C,Dot Farm Marsh,Typha latifolia,Co-occurring
+DT2S,Dot Farm Marsh,Typha latifolia,Separate
+DT2C,Dot Farm Marsh,Typha latifolia,Co-occurring
+DT3S,Dot Farm Marsh,Typha latifolia,Separate
+DT3C,Dot Farm Marsh,Typha latifolia,Co-occurring
+DT4S,Dot Farm Marsh,Typha latifolia,Separate
+DT4C,Dot Farm Marsh,Typha latifolia,Co-occurring
+GL1S,Geneva Swamp,Lythrum salicaria,Separate
+GL1C,Geneva Swamp,Lythrum salicaria,Co-occurring
+GL2S,Geneva Swamp,Lythrum salicaria,Separate
+GL2C,Geneva Swamp,Lythrum salicaria,Co-occurring
+GL3S,Geneva Swamp,Lythrum salicaria,Separate
+GL3C,Geneva Swamp,Lythrum salicaria,Co-occurring
+GL4S,Geneva Swamp,Lythrum salicaria,Separate
+GL4C,Geneva Swamp,Lythrum salicaria,Co-occurring
+GT1S,Geneva Swamp,Typha latifolia,Separate
+GT1C,Geneva Swamp,Typha latifolia,Co-occurring
+GT2S,Geneva Swamp,Typha latifolia,Separate
+GT2C,Geneva Swamp,Typha latifolia,Co-occurring
+GT3S,Geneva Swamp,Typha latifolia,Separate
+GT3C,Geneva Swamp,Typha latifolia,Co-occurring
+GT4S,Geneva Swamp,Typha latifolia,Separate
+GT4C,Geneva Swamp,Typha latifolia,Co-occurring
+ML1S,Mercer Pike,Lythrum salicaria,Separate
+ML1C,Mercer Pike,Lythrum salicaria,Co-occurring
+ML2S,Mercer Pike,Lythrum salicaria,Separate
+ML2C,Mercer Pike,Lythrum salicaria,Co-occurring
+ML3S,Mercer Pike,Lythrum salicaria,Separate
+ML3C,Mercer Pike,Lythrum salicaria,Co-occurring
+ML4S,Mercer Pike,Lythrum salicaria,Separate
+ML4C,Mercer Pike,Lythrum salicaria,Co-occurring
+MT1S,Mercer Pike,Typha latifolia,Separate
+MT1C,Mercer Pike,Typha latifolia,Co-occurring
+MT2S,Mercer Pike,Typha latifolia,Separate
+MT2C,Mercer Pike,Typha latifolia,Co-occurring
+MT3S,Mercer Pike,Typha latifolia,Separate
+MT3C,Mercer Pike,Typha latifolia,Co-occurring
+MT4S,Mercer Pike,Typha latifolia,Separate
+MT4C,Mercer Pike,Typha latifolia,Co-occurring
